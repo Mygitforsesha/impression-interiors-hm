@@ -1,0 +1,98 @@
+/* Payment Methods Section */
+.payment-methods {
+  background: linear-gradient(180deg, rgba(26, 26, 46, 0.5) 0%, rgba(22, 33, 62, 0.8) 100%);
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.payment-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 20px var(--glass-shadow);
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(255, 107, 53, 0.2);
+  border-color: rgba(255, 107, 53, 0.5);
+}
+
+.payment-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-sm);
+  filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.3));
+  transition: all var(--transition-normal);
+}
+
+.payment-card:hover .payment-icon {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 15px rgba(255, 107, 53, 0.6));
+}
+
+.payment-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-light);
+}
+
+.payment-description {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.security-badge {
+  margin-top: var(--spacing-xxl);
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(199, 125, 255, 0.2));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.badge-icon {
+  font-size: 3rem;
+  filter: drop-shadow(0 0 15px rgba(255, 107, 53, 0.5));
+  flex-shrink: 0;
+}
+
+.badge-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-light);
+}
+
+.badge-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .payment-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+  
+  .security-badge {
+    flex-direction: column;
+    text-align: center;
+  }
+}
