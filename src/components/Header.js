@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container header-inner">
-        <a href="hero" className="header-logo" aria-label="Impression by Hemant Matta - Home">
+        <a href="#hero" className="header-logo" aria-label="Impression by Hemant Matta - Home">
           <img
             src="/assets/logo.png"
             width={48}
