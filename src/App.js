@@ -1,13 +1,11 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import FeaturedProducts from './components/FeaturedProducts';
-import Services from './components/Services';
-import PaymentMethods from './components/PaymentMethods';
-import ReturnsPolicy from './components/ReturnsPolicy';
-import ShippingInfo from './components/ShippingInfo';
-import TrustBadges from './components/TrustBadges';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
+import BottomCTA from './components/BottomCTA';
+import WhatsAppButton from './components/WhatsAppButton';
 import './App.css';
 
 function App() {
@@ -16,14 +14,12 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <FeaturedProducts />
-        <Services />
-        <PaymentMethods />
-        <ReturnsPolicy />
-        <ShippingInfo />
-        <TrustBadges />
+        <Portfolio />
+        <Contact />
       </main>
       <Footer />
+      <BottomCTA />
+      <WhatsAppButton />
     </div>
   );
 }
