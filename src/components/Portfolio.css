@@ -1,0 +1,102 @@
+/* Portfolio – single column, large swipe-friendly cards, vertical (Instagram-style) images */
+.portfolio {
+  background: var(--bg-page);
+}
+
+.portfolio-heading {
+  font-size: clamp(1.5rem, 4vw, 1.875rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.portfolio-sub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.portfolio-card {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-card);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.portfolio-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Instagram-style vertical aspect (4:5) – large, swipe-friendly */
+.portfolio-card-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--color-stone);
+}
+
+.portfolio-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.portfolio-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(42, 39, 36, 0.5) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.portfolio-card-info {
+  padding: var(--space-md);
+  min-height: var(--tap-min);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.portfolio-card-category {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.portfolio-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.portfolio-card-link:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

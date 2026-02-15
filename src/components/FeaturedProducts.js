@@ -5,7 +5,7 @@ const FeaturedProducts = () => {
   const products = [
     {
       id: 1,
-      title: 'Abstract Sunset',
+      title: 'Abstract Sunsets.',
       category: 'Digital Print',
       price: '$49.99',
       image: '🎨',
